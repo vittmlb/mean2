@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {{{title}}}
+    </title>
+</head>
+<body>
+{{#each messages}}
+    <div class="flash">{{this}}</div>
+{{/each}}
+<form class="form form-group" action="/signin" method="post">
+    <div class="form-group">
+        <label>Username:</label>
+        <input class="form-control" type="text" name="username" />
+    </div>
+    <div class="form-group">
+        <label>Password:</label>
+        <input class="form-control" type="password" name="password" />
+    </div>
+    <div class="form-group">
+        <input class="btn btn-info" type="submit" value="Sign In" />
+    </div>
+</form>
+</body>
+</html>
