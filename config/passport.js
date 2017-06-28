@@ -3,6 +3,7 @@
  */
 const passport = require('passport');
 const mongoose = require('mongoose');
+const config = require('./config');
 
 module.exports = function() {
 
@@ -21,5 +22,6 @@ module.exports = function() {
     });
 
     require('./stategies/local')();
+    require('./stategies/google')();
 
 };

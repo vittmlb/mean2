@@ -3,6 +3,10 @@
  */
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
+process.env.clientId = '144389573760-3e2falftrqt87sqomkm7mhnj411p51j5.apps.googleusercontent.com';
+process.env.clientSecret = 'BwZab72eI5ubd6_crgAuqSg-';
+process.env.callbackURL = 'http://localhost:3000/oauth/google/callback';
+
 const configureMonogoose = require('./config/mongoose');
 const configureExpress = require('./config/express');
 const configurePassport = require('./config/passport');
