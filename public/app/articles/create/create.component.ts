@@ -19,8 +19,7 @@ export class CreateComponent {
     create() {
         this._articlesService
             .create(this.article)
-            .subscribe(createdArticle => this._router.navigate(['/articles', createdArticle._id]),
-                error => this.errorMessage = error);
+            .subscribe(createdArticle => this._router.navigate(['/articles'], createdArticle._id), error => this.errorMessage = error);
     }
 
 }

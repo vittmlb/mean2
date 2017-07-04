@@ -4,8 +4,8 @@
 import { Routes } from '@angular/router';
 
 import { ArticlesComponent } from './articles.component';
-import { CreateComponent } from './create/create.component';
 import { ListComponent } from './list/list.component';
+import { CreateComponent } from './create/create.component';
 import { ViewComponent } from './view/view.component';
 import { EditComponent } from './edit/edit.component';
 

@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthenticationService } from '../../authentication/authentication.service';
 import { ArticlesService } from '../articles.service';
-import { errorHandler } from "@angular/platform-browser/src/browser";
 
 @Component({
     selector: 'view',
@@ -18,10 +17,12 @@ export class ViewComponent {
     errorMessage: string;
     allowEdit: boolean = false;
 
-    constructor(private _router:Router,
-                private _route: ActivatedRoute,
-                private _authenticationService: AuthenticationService,
-                private _articlesService: ArticlesService) {}
+    constructor(
+        private _router: Router,
+        private _route: ActivatedRoute,
+        private _authenticationService: AuthenticationService,
+        private _articlesService: ArticlesService
+    ) {}
 
     ngOnInit() {
         this.user = this._authenticationService.user;
@@ -37,7 +38,7 @@ export class ViewComponent {
                         this.allowEdit = (this.user && this.user._id === this.article.creator._id);
                     },
                     error => this._router.navigate(['/articles'])
-                )
+                );
         });
     }
 
@@ -48,4 +49,5 @@ export class ViewComponent {
     delete() {
         this._articlesService.delete(this.article._id).subscribe(deletedArticle => this._router.navigate(['/articles']), error => this.errorMessage = error);
     }
+
 }

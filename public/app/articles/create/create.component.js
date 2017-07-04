@@ -34,7 +34,7 @@ System.register(['@angular/core', '@angular/router', '../articles.service'], fun
                     var _this = this;
                     this._articlesService
                         .create(this.article)
-                        .subscribe(function (createdArticle) { return _this._router.navigate(['/articles', createdArticle._id]); }, function (error) { return _this.errorMessage = error; });
+                        .subscribe(function (createdArticle) { return _this._router.navigate(['/articles'], createdArticle._id); }, function (error) { return _this.errorMessage = error; });
                 };
                 CreateComponent = __decorate([
                     core_1.Component({
