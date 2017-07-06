@@ -27,7 +27,9 @@ System.register(['@angular/core', '../articles.service'], function(exports_1, co
                 }
                 ListComponent.prototype.ngOnInit = function () {
                     var _this = this;
-                    this._articlesService.list().subscribe(function (articles) { return _this.articles = articles; });
+                    this._articlesService
+                        .list()
+                        .subscribe(function (articles) { return _this.articles = articles; }, function (error) { return _this.errorMessage = error; });
                 };
                 ListComponent = __decorate([
                     core_1.Component({

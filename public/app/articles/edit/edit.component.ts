@@ -15,16 +15,21 @@ export class EditComponent {
     errorMessage: string;
     paramsObserver: any;
 
-    constructor(private _router: Router,
-                private _route: ActivatedRoute,
-                private _articlesService: ArticlesService) {}
+    constructor(
+        private _router:Router,
+        private _route: ActivatedRoute,
+        private _articlesService: ArticlesService
+    ) {}
 
     ngOnInit() {
         this.paramsObserver = this._route.params.subscribe(params => {
-            let articleId = params['articleId'];
-            this._articlesService.read(articleId).subscribe(article => {
-                this.article = article;
-            }, error => this._router.navigate(['/articles']));
+            let articleId = params['articlesId'];
+            this._articlesService
+                .read(articleId)
+                .subscribe(
+                    article => this.article = article,
+                    error => this._router.navigate(['/articles'])
+                );
         });
     }
 
@@ -33,6 +38,10 @@ export class EditComponent {
     }
 
     update() {
-        this._articlesService.update(this.article).subscribe(savedArticle => this._router.navigate(['/articles', savedArticle._id]), error => this.errorMessage = error);
+        this._articlesService.update(this.article).subscribe(
+            savedArticle => this._router.navigate(['/articles', savedArticle._id]),
+            error => this.errorMessage = error
+        )
     }
+
 }

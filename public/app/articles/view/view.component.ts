@@ -3,6 +3,7 @@
  */
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+
 import { AuthenticationService } from '../../authentication/authentication.service';
 import { ArticlesService } from '../articles.service';
 
@@ -26,10 +27,8 @@ export class ViewComponent {
 
     ngOnInit() {
         this.user = this._authenticationService.user;
-
         this.paramsObserver = this._route.params.subscribe(params => {
             let articleId = params['articleId'];
-
             this._articlesService
                 .read(articleId)
                 .subscribe(
@@ -47,7 +46,10 @@ export class ViewComponent {
     }
 
     delete() {
-        this._articlesService.delete(this.article._id).subscribe(deletedArticle => this._router.navigate(['/articles']), error => this.errorMessage = error);
+        this._articlesService.delete(this.article._id).subscribe(
+            deleteArticle => this._router.navigate(['/articles']),
+            error => this.errorMessage = error
+        )
     }
 
 }
