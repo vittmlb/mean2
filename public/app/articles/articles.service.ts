@@ -11,7 +11,9 @@ import { Http, Headers, Request, RequestMethod, Response } from '@angular/http';
 export class ArticlesService {
     private _baseURL = 'api/articles';
 
-    constructor(private _http: Http) {}
+    constructor(
+        private _http: Http
+    ) {}
 
     create(article: any): Observable<any> {
         return this._http
