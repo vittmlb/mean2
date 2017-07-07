@@ -23,11 +23,11 @@ export class EditComponent {
 
     ngOnInit() {
         this.paramsObserver = this._route.params.subscribe(params => {
-            let articleId = params['articlesId'];
+            let articleId = params['articleId'];
             this._articlesService
                 .read(articleId)
                 .subscribe(
-                    article => this.article = article,
+                    article => { this.article = article; },
                     error => this._router.navigate(['/articles'])
                 );
         });

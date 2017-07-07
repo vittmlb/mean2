@@ -34,10 +34,10 @@ System.register(['@angular/core', '@angular/router', '../articles.service'], fun
                 EditComponent.prototype.ngOnInit = function () {
                     var _this = this;
                     this.paramsObserver = this._route.params.subscribe(function (params) {
-                        var articleId = params['articlesId'];
+                        var articleId = params['articleId'];
                         _this._articlesService
                             .read(articleId)
-                            .subscribe(function (article) { return _this.article = article; }, function (error) { return _this._router.navigate(['/articles']); });
+                            .subscribe(function (article) { _this.article = article; }, function (error) { return _this._router.navigate(['/articles']); });
                     });
                 };
                 EditComponent.prototype.ngOnDestroy = function () {
