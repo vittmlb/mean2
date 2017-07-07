@@ -15,7 +15,7 @@ export class CreateComponent {
     errorMessage: string;
 
     constructor(
-        private _router:Router,
+        private _router: Router,
         private _articlesService: ArticlesService
     ) {}
 
@@ -24,7 +24,7 @@ export class CreateComponent {
             .create(this.article)
             .subscribe(
                 createdArticle => this._router.navigate(['/articles', createdArticle._id]),
-                error =>  this.errorMessage = error
+                error => this.errorMessage = error
             );
     }
 }
