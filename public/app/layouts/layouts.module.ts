@@ -9,6 +9,7 @@ import { LayoutsRoutes } from './layouts.routes';
 import { LayoutsComponent } from './layouts.component';
 import { MenuComponent } from './menu/menu.component';
 import { JumboComponent } from './jumbo/jumbo.component';
+import { TypoComponent } from './typography/typography.component';
 
 @NgModule({
     imports: [
@@ -18,7 +19,9 @@ import { JumboComponent } from './jumbo/jumbo.component';
     declarations: [
         LayoutsComponent,
         MenuComponent,
-        JumboComponent
+        JumboComponent,
+        TypoComponent
     ]
 })
-export class LayoutsModule {}
+export class LayoutsModule {
+}

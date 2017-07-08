@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/common', '@angular/router', './layouts.routes', './layouts.component', './menu/menu.component', './jumbo/jumbo.component'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/common', '@angular/router', './layouts.routes', './layouts.component', './menu/menu.component', './jumbo/jumbo.component', './typography/typography.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/common', '@angular/router', './layou
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, common_1, router_1, layouts_routes_1, layouts_component_1, menu_component_1, jumbo_component_1;
+    var core_1, common_1, router_1, layouts_routes_1, layouts_component_1, menu_component_1, jumbo_component_1, typography_component_1;
     var LayoutsModule;
     return {
         setters:[
@@ -34,6 +34,9 @@ System.register(['@angular/core', '@angular/common', '@angular/router', './layou
             },
             function (jumbo_component_1_1) {
                 jumbo_component_1 = jumbo_component_1_1;
+            },
+            function (typography_component_1_1) {
+                typography_component_1 = typography_component_1_1;
             }],
         execute: function() {
             LayoutsModule = (function () {
@@ -48,7 +51,8 @@ System.register(['@angular/core', '@angular/common', '@angular/router', './layou
                         declarations: [
                             layouts_component_1.LayoutsComponent,
                             menu_component_1.MenuComponent,
-                            jumbo_component_1.JumboComponent
+                            jumbo_component_1.JumboComponent,
+                            typography_component_1.TypoComponent
                         ]
                     }), 
                     __metadata('design:paramtypes', [])
