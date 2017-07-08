@@ -12,11 +12,11 @@ import { ArticlesService } from '../articles.service';
 })
 export class EditComponent {
     article: any = {};
-    paramsObserver: any;
     errorMessage: string;
+    paramsObserver: any;
 
     constructor(
-        private _router: Router,
+        private _router:Router,
         private _route: ActivatedRoute,
         private _articlesService: ArticlesService
     ) {}
@@ -27,7 +27,7 @@ export class EditComponent {
             this._articlesService
                 .read(articleId)
                 .subscribe(
-                    article => this.article = article,
+                    article => { this.article = article; },
                     error => this._router.navigate(['/articles'])
                 );
         });
@@ -41,7 +41,7 @@ export class EditComponent {
         this._articlesService.update(this.article).subscribe(
             savedArticle => this._router.navigate(['/articles', savedArticle._id]),
             error => this.errorMessage = error
-        );
+        )
     }
 
 }

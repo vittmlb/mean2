@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'mean-app',
-    template: '<router-outlet></router-outlet>'
+    templateUrl: 'app/index.html'
 })
 
 export class AppComponent {}

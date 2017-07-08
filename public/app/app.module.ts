@@ -12,29 +12,27 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes';
 
 import { HomeModule } from './home/home.module';
-import { AuthenticationService } from './authentication/authentication.service';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { ArticlesModule } from './articles/articles.module';
+import { LayoutsModule } from './layouts/layouts.module';
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
         FormsModule,
-        AuthenticationModule,
         HomeModule,
         ArticlesModule,
+        LayoutsModule,
         RouterModule.forRoot(AppRoutes)
     ],
     declarations: [
         AppComponent
-    ],
-    providers: [
-        AuthenticationService
     ],
     bootstrap: [
         AppComponent
     ]
 })
 
-export class AppModule {}
+export class AppModule {
+}

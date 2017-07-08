@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', '@angular/router', '@angular/http', './app.component', './app.routes', './home/home.module', './authentication/authentication.service', './authentication/authentication.module', './articles/articles.module'], function(exports_1, context_1) {
+System.register(['@angular/core', '@angular/platform-browser', '@angular/forms', '@angular/router', '@angular/http', './app.component', './app.routes', './home/home.module', './articles/articles.module', './layouts/layouts.module'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, platform_browser_1, forms_1, router_1, http_1, app_component_1, app_routes_1, home_module_1, authentication_service_1, authentication_module_1, articles_module_1;
+    var core_1, platform_browser_1, forms_1, router_1, http_1, app_component_1, app_routes_1, home_module_1, articles_module_1, layouts_module_1;
     var AppModule;
     return {
         setters:[
@@ -38,14 +38,11 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
             function (home_module_1_1) {
                 home_module_1 = home_module_1_1;
             },
-            function (authentication_service_1_1) {
-                authentication_service_1 = authentication_service_1_1;
-            },
-            function (authentication_module_1_1) {
-                authentication_module_1 = authentication_module_1_1;
-            },
             function (articles_module_1_1) {
                 articles_module_1 = articles_module_1_1;
+            },
+            function (layouts_module_1_1) {
+                layouts_module_1 = layouts_module_1_1;
             }],
         execute: function() {
             AppModule = (function () {
@@ -57,16 +54,13 @@ System.register(['@angular/core', '@angular/platform-browser', '@angular/forms',
                             platform_browser_1.BrowserModule,
                             http_1.HttpModule,
                             forms_1.FormsModule,
-                            authentication_module_1.AuthenticationModule,
                             home_module_1.HomeModule,
                             articles_module_1.ArticlesModule,
+                            layouts_module_1.LayoutsModule,
                             router_1.RouterModule.forRoot(app_routes_1.AppRoutes)
                         ],
                         declarations: [
                             app_component_1.AppComponent
-                        ],
-                        providers: [
-                            authentication_service_1.AuthenticationService
                         ],
                         bootstrap: [
                             app_component_1.AppComponent

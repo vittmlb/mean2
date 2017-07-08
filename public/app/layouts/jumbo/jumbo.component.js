@@ -11,27 +11,27 @@ System.register(['@angular/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var JumboComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            JumboComponent = (function () {
+                function JumboComponent() {
                 }
-                AppComponent = __decorate([
+                JumboComponent = __decorate([
                     core_1.Component({
-                        selector: 'mean-app',
-                        templateUrl: 'app/index.html'
+                        selector: 'jumbo-tag',
+                        templateUrl: 'app/layouts/jumbo/jumbo.template.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], JumboComponent);
+                return JumboComponent;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("JumboComponent", JumboComponent);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=jumbo.component.js.map

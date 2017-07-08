@@ -11,7 +11,9 @@ System.register(['./home.component'], function(exports_1, context_1) {
         execute: function() {
             exports_1("HomeRoutes", HomeRoutes = [{
                     path: '',
-                    component: home_component_1.HomeComponent
+                    children: [
+                        { path: '', component: home_component_1.HomeComponent },
+                    ]
                 }]);
         }
     }

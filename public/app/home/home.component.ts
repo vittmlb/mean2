@@ -11,7 +11,5 @@ import { AuthenticationService } from '../authentication/authentication.service'
 
 export class HomeComponent {
     user: any;
-    constructor(private _authenticationService: AuthenticationService) {
-        this.user = _authenticationService.user;
-    }
+    constructor() {}
 }

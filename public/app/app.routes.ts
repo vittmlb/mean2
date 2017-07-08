@@ -3,7 +3,9 @@
  */
 import { Routes } from '@angular/router';
 
-export const AppRoutes: Routes = [{
-    path: '**',
-    redirectTo: '/'
-}];
+import { MenuComponent } from './layouts/menu/menu.component';
+
+export const AppRoutes: Routes = [
+    {path: '**', redirectTo: '/'},
+    {path: '', component: MenuComponent, outlet: 'menu'}
+];
