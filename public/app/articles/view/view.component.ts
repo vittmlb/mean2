@@ -1,11 +1,8 @@
-/**
- * Created by Vittorio on 27/06/2017.
- */
-import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component } from "@angular/core";
+import { Router, ActivatedRoute } from "@angular/router";
 
-import { AuthenticationService } from '../../authentication/authentication.service';
-import { ArticlesService } from '../articles.service';
+import { AuthenticationService } from "../../authentication/authentication.service";
+import { ArticlesService } from "../articles.service";
 
 @Component({
     selector: 'view',

@@ -1,10 +1,7 @@
-/**
- * Created by Vittorio on 27/06/2017.
- */
-import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component } from "@angular/core";
+import { Router, ActivatedRoute } from "@angular/router";
 
-import { ArticlesService } from '../articles.service';
+import { ArticlesService } from "../articles.service";
 
 @Component({
     selector: 'edit',
@@ -12,11 +9,11 @@ import { ArticlesService } from '../articles.service';
 })
 export class EditComponent {
     article: any = {};
-    errorMessage: string;
     paramsObserver: any;
+    errorMessage: string;
 
     constructor(
-        private _router:Router,
+        private _router: Router,
         private _route: ActivatedRoute,
         private _articlesService: ArticlesService
     ) {}
@@ -27,7 +24,7 @@ export class EditComponent {
             this._articlesService
                 .read(articleId)
                 .subscribe(
-                    article => { this.article = article; },
+                    article => this.article = article,
                     error => this._router.navigate(['/articles'])
                 );
         });
@@ -41,7 +38,7 @@ export class EditComponent {
         this._articlesService.update(this.article).subscribe(
             savedArticle => this._router.navigate(['/articles', savedArticle._id]),
             error => this.errorMessage = error
-        )
+        );
     }
 
 }

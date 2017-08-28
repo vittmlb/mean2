@@ -1,4 +1,4 @@
-System.register(['./articles.component', './list/list.component', './create/create.component', './view/view.component', './edit/edit.component'], function(exports_1, context_1) {
+System.register(["./articles.component", "./list/list.component", "./create/create.component", "./view/view.component", "./edit/edit.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var articles_component_1, list_component_1, create_component_1, view_component_1, edit_component_1;

@@ -1,11 +1,8 @@
-/**
- * Created by Vittorio on 26/06/2017.
- */
-import 'rxjs/Rx';
-import { Observable } from 'rxjs/Observable';
+import "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
 
-import { Injectable } from '@angular/core';
-import { Http, Headers, Request, RequestMethod, Response } from '@angular/http';
+import { Injectable } from "@angular/core";
+import { Http, Headers, Request, RequestMethod, Response } from "@angular/http";
 
 @Injectable()
 export class ArticlesService {

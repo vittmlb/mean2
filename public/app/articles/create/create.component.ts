@@ -1,10 +1,7 @@
-/**
- * Created by Vittorio on 26/06/2017.
- */
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 
-import { ArticlesService } from '../articles.service';
+import { ArticlesService } from "../articles.service";
 
 @Component({
     selector: 'create',

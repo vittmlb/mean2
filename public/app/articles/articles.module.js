@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/common', '@angular/forms', '@angular/router', './articles.component', './articles.routes', './list/list.component', './create/create.component', './view/view.component', './edit/edit.component'], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/common", "@angular/forms", "@angular/router", "./articles.component", "./articles.routes", "./list/list.component", "./create/create.component", "./view/view.component", "./edit/edit.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {

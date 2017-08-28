@@ -1,4 +1,4 @@
-System.register(['@angular/core', '@angular/router', '../articles.service'], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/router", "../articles.service"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -37,7 +37,7 @@ System.register(['@angular/core', '@angular/router', '../articles.service'], fun
                         var articleId = params['articleId'];
                         _this._articlesService
                             .read(articleId)
-                            .subscribe(function (article) { _this.article = article; }, function (error) { return _this._router.navigate(['/articles']); });
+                            .subscribe(function (article) { return _this.article = article; }, function (error) { return _this._router.navigate(['/articles']); });
                     });
                 };
                 EditComponent.prototype.ngOnDestroy = function () {
